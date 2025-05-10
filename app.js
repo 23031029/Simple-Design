@@ -10,7 +10,7 @@ const app = express();
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'C207',
   database: 'c237_idweb',
   port: 3316
   // host:'mysql-serjia.alwaysdata.net',
