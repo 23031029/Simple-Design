@@ -8,16 +8,16 @@ const app = express();
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  // host: 'localhost',
-  // user: 'root',
-  // password: '',
-  // database: 'c237_idweb',
-  // port: 3316
-  host:'mysql-serjia.alwaysdata.net',
-  user:'serjia',
-  password:'4GYHW7H8J8jycY.',
-  database:'serjia_idweb',
-  port: 3306
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'c237_idweb',
+  port: 3316
+  // host:'mysql-serjia.alwaysdata.net',
+  // user:'serjia',
+  // password:'4GYHW7H8J8jycY.',
+  // database:'serjia_idweb',
+  // port: 3306
 });
 
 connection.connect((err) => {
