@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `c237_idweb`
+CREATE DATABASE SimpleDesign;
+USE SimpleDesign;
 --
 
 -- --------------------------------------------------------

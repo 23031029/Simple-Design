@@ -11,8 +11,8 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'C207',
-  database: 'c237_idweb',
-  port: 3316
+  database: 'SimpleDesign',
+  port: 3306
   // host:'mysql-serjia.alwaysdata.net',
   // user:'serjia',
   // password:'4GYHW7H8J8jycY.',
