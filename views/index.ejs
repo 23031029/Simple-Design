@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Simple Design</title>
+    <style>
+        .custom-table-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            overflow-x: auto;
+        }
+
+        .custom-table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .custom-table-container th {
+            font-size: larger;
+            text-align: left;
+        }
+
+        .custom-table-container td {
+            font-weight: 400; 
+            padding: 10px;
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <%- include ('partials/navbar.ejs') %>
+    </header>
+    
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://images.adsttc.com/media/images/5f2c/721a/b357/65db/c000/0057/slideshow/06_Arches_Apartment_XVII.jpg?1596748307" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://images.adsttc.com/media/images/5f2c/7203/b357/65db/c000/0056/slideshow/06_Arches_Santa_Teresa.jpg?1596748285" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.adsttc.com/media/images/5f2c/7127/b357/659b/9200/00b4/slideshow/10_Fluid_Ready_Made.jpg?1596748064" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="container">
+        <h1 class="text-center my-4" style="font-weight: 400;">How SimpleDesign Works</h1>
+        <div class="custom-table-container">
+            <table class="table">
+                <tr>
+                    <th>No.1</th>
+                    <td>Exploring Our Services</td>
+                    <td>
+                        Want to know what type of service we provide? Click "<strong>Our Services</strong>" in the Navigation Bar to find out more!
+                    </td>
+                </tr>
+                <tr>
+                    <th>No.2</th>
+                    <td>Finding out the quotation of the service</td>
+                    <td>
+                        Looking for an estimated quote for our interior design services? Just click on "<strong>Quotation</strong>" to send us your information. We'll get back to you with an estimate via email as soon as possible!
+                    </td>
+                </tr>
+                <tr>
+                    <th>No.3</th>
+                    <td>Finding Your Style</td>
+                    <td>
+                        Click on "<strong>Styles</strong>" in the Navigation Bar. You'll find a variety of options to inspire and transform your space into something special. Dive in and find the perfect look that suits your taste!
+                    </td>
+                </tr>
+                <tr>
+                    <th>No.4</th>
+                    <td>Find Furniture/Products</td>
+                    <td>
+                        Just click on "<strong>Our Products</strong>" to explore the wide range of furniture and other products we offer. We'll deliver them right to your door!
+                    </td>
+                </tr>
+                <tr>
+                    <th>No.5</th>
+                    <td>Check out our trusted designer's portfolio</td>
+                    <td>
+                        Take a look at the amazing work by our trusted designer! Simply click on "<strong>Our Portfolio</strong>" to explore the beautiful spaces we've created. We hope you enjoy browsing through our designs!
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <footer style="text-align: center; margin-top: 20px;">
+        <p>If you have any questions or inquiries, feel free to reach out to our team!</p>
+    </footer>
+</body>
+</html>

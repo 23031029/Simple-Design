@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpl Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card {
+            background-color: rgba(224, 224, 224, 0.8);
+            margin-bottom: 20px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-title {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card-text {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <%- include('partials/navbar.ejs') %>
+    </header>
+    
+    <div class="container mt-4">
+        <h1>Explore Different Interior Design Styles</h1>
+        
+        <ul>
+            <li><strong>Color Palette:</strong> Note the predominant colors used in the style. This includes wall colors, furniture, and accent pieces.</li>
+            <li><strong>Furniture and Layout:</strong> Pay attention to the types of furniture used and their arrangement. Note if the furniture is minimalist, ornate, modern, etc.</li>
+            <li><strong>Materials and Textures:</strong> Identify the materials used for flooring, walls, and furniture. Note textures such as smooth, rough, glossy, matte, etc.</li>
+            <li><strong>Patterns and Prints:</strong> Look for recurring patterns or prints used in textiles, wallpapers, or decorative elements.</li>
+            <li><strong>Lighting:</strong> Observe the type and placement of lighting fixtures. Note if the style favors natural light, ambient lighting, or dramatic lighting effects.</li>
+            <li><strong>Overall Atmosphere:</strong> Describe the overall atmosphere or mood created by the style. Note if it feels cozy, formal, relaxed, etc.</li>
+        </ul>
+        
+        <p>Don't worry if you find it challenging to understand—let our interior designers assist you during your first consultation.</p>
+
+        <% for(let i = 0; i < designs.length; i++) { %>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= designs[i].style %></h5>
+                    <p class="card-text">
+                        <h4><%= designs[i].description %></h4>
+                        <br>
+                        <strong>Color Scheme:</strong> <%= designs[i].color_scheme %>
+                        <br>
+                        <strong>Material and Texture:</strong> <%= designs[i].material %>
+                    </p>
+                </div>
+                <img src="images/<%= designs[i].image %>" class="card-img-bottom img-fluid" alt="<%= designs[i].style %> image">
+            </div>
+            <br>
+        <% } %>
+    </div>
+</body>
+</html>
