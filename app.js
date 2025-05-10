@@ -8,26 +8,21 @@ const app = express();
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'C207',
-  database: 'SimpleDesign',
-  port: 3306
-  // host:'mysql-serjia.alwaysdata.net',
-  // user:'serjia',
-  // password:'4GYHW7H8J8jycY.',
-  // database:'serjia_idweb',
-  // port: 3306
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
+  port: process.env.PORT || 3306
 });
 
-connection.connect((err) => {
+// Test connection
+connection.connect(function(err) {
   if (err) {
-    console.error('Error connecting to MySQL:', err);
+    console.error('Error connecting to database: ' + err.stack);
     return;
   }
-  console.log('Connected to MySQL database');
+  console.log('Connected to database as id ' + connection.threadId);
 });
-
 // Set up view engine
 app.set('view engine', 'ejs');
 
